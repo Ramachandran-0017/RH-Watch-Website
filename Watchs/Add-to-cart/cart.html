@@ -149,7 +149,7 @@
               <span>Total</span> <span id="total-price">₹0</span>
             </div>
 
-            <button class="checkout-btn">
+            <button class="checkout-btn" id="checkoutBtn">
               <span>Proceed to Secure Checkout</span>
               <i class="fa-solid fa-arrow-right"></i>
             </button>
@@ -244,6 +244,20 @@
           <div class="language">🌐 English</div>
         </div>
       </footer>
+    </div>
+
+    <div class="order-success-overlay" id="orderSuccessOverlay">
+      <div class="order-success-box">
+        <div class="order-success-icon">
+          <i class="fa-solid fa-check"></i>
+        </div>
+        <h2>Order Placed!</h2>
+        <p>Thank you for shopping with us.</p>
+        <p class="order-success-id" id="orderIdText"></p>
+        <a href="../../index.html" class="order-success-btn">
+          Continue Shopping
+        </a>
+      </div>
     </div>
 
     <script src="./cart.js"></script>

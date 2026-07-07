@@ -1,0 +1,1012 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --font-heading: "Raleway", sans-serif;
+  --font-paragraph: "Montserrat", sans-serif;
+
+  --hover-color: #d6002a;
+  --text-color: #666;
+  --primary-bg: #f5f5f5;
+
+  --white: #fff;
+  --dark: #222;
+  --border-color: #ddd;
+}
+
+body {
+  font-family: var(--font-paragraph);
+  font-weight: 300;
+  font-size: 13px;
+  letter-spacing: 2px;
+  scroll-behavior: smooth;
+  cursor: default;
+  background-color: var(--primary-bg);
+  overflow-x: hidden;
+}
+
+button {
+  font-family: var(--font-paragraph);
+  font-weight: 300;
+  font-size: 13px;
+  letter-spacing: 2px;
+}
+
+h1 {
+  font-family: var(--font-heading);
+  font-weight: 300;
+  letter-spacing: 5px;
+}
+
+a {
+  color: var(--dark);
+  text-decoration: none;
+}
+
+.navContainer {
+  width: 100%;
+  background: #f5f5f5;
+  border-bottom: 1px solid #e5e5e5;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.12);
+  color: var(--dark);
+}
+
+.navbarHide,
+.navbarShow {
+  display: none;
+}
+
+.secondNavList2 {
+  display: none;
+}
+
+/* ---------- Top Navigation ---------- */
+
+.topNav {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  padding: 10px 24px;
+  color: var(--dark);
+}
+
+/* Menu */
+
+.menuSection {
+  justify-self: start;
+}
+
+.menuSection ul {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  list-style: none;
+}
+
+.menuSection li {
+  cursor: pointer;
+}
+
+/* Logo */
+
+.logoContainer {
+  justify-self: center;
+}
+
+.logoContainer img {
+  width: 55px;
+}
+
+/* Profile */
+
+.profileSection {
+  justify-self: end;
+}
+
+.profileSection ul {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  list-style: none;
+}
+
+/* ---------- Secondary Navigation ---------- */
+
+.secondNav {
+  display: flex;
+  justify-content: center;
+  padding: 15px 30px;
+}
+
+.secondNavList {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+  list-style: none;
+  color: var(--dark);
+}
+
+.secondNavList li {
+  color: var(--dark);
+  cursor: pointer;
+}
+
+.secondNavList li a {
+  color: var(--dark);
+  cursor: pointer;
+}
+
+/* ============================================================
+   DETAILS HERO — flex layout: image column + sticky info column
+   ============================================================ */
+
+.detailsHero {
+  display: flex;
+  align-items: flex-start;
+  margin: 40px auto;
+  gap: 60px;
+  padding: 0 20px;
+  position: relative;
+  max-width: 1400px;
+}
+
+.watchPreviewContainer {
+  flex: 1 1 0%; /* takes up remaining space, can shrink */
+  min-width: 0; /* lets flex children shrink below their content size */
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* --- The sticky right column ---
+   Single source of truth for sizing: flex-basis controls the
+   width in the flex layout, so there's no fight with a separate
+   `width` declaration. */
+.watchInfoContainer {
+  flex: 0 0 420px;
+  max-width: 100%;
+  position: sticky;
+  top: 40px;
+  align-self: flex-start;
+  padding-top: 10px;
+}
+
+/* --- Image Styling --- */
+.mainImage img {
+  width: 100%;
+  height: auto;
+  max-height: 600px;
+  object-fit: contain;
+  background-color: #f9f9f9;
+}
+
+.secondaryImagesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+  gap: 10px;
+}
+
+.secondaryImagesGrid img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  cursor: pointer;
+  border: 1px solid #eee;
+  background-color: #e7e7e7;
+  transition: border-color 0.2s ease;
+}
+
+.secondaryImagesGrid img.active {
+  border-color: #c41230;
+  border-width: 2px;
+}
+
+.badgeRow {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 15px;
+}
+.badgeNew {
+  background-color: #f4f4f4;
+  padding: 4px 8px;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+.badgeSeries {
+  color: #a62639;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.watchTitle {
+  font-size: 34px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  margin: 0 0 5px;
+}
+.watchSubtitle {
+  color: #666;
+  font-size: 15px;
+  margin: 0 0 25px;
+}
+.watchPrice {
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.priceDisclaimer {
+  font-size: 12px;
+  color: #666;
+  line-height: 1.5;
+  margin-bottom: 25px;
+}
+
+.btnBoutique {
+  width: 100%;
+  background-color: #c41230;
+  color: #fff;
+  border: none;
+  padding: 16px;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  cursor: pointer;
+  margin-bottom: 30px;
+}
+
+/* Variants & Trust Marks */
+.variantsWrapper {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 35px;
+}
+.variantThumb {
+  width: 45px;
+  height: 45px;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  padding: 2px;
+  cursor: pointer;
+}
+.variantThumb.active {
+  border-color: #c41230;
+}
+.variantThumb img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.variantMoreCount {
+  font-size: 13px;
+  color: #666;
+  margin-left: 4px;
+}
+
+.trustBadges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px 40px;
+  font-size: 13px;
+  color: #444;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+/* Accordion Component UI */
+.accordionItem {
+  border-bottom: 1px solid #eee;
+}
+.accordionHeader {
+  width: 100%;
+  background: none;
+  border: none;
+  text-align: left;
+  padding: 20px 0;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  gap: 12px;
+}
+.accordionContent {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+  font-size: 14px;
+  color: #555;
+  line-height: 1.6;
+}
+.accordionContent p {
+  padding-bottom: 15px;
+  margin: 0;
+}
+
+/*  Key Materials  */
+.materialsSection {
+  background-color: #000;
+  color: #fff;
+  padding: 80px 40px;
+  overflow: hidden;
+}
+.sectionLabel {
+  font-size: 11px;
+  letter-spacing: 3px;
+  color: #888;
+  text-transform: uppercase;
+  margin-bottom: 35px;
+}
+.materialsContentLayout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: center;
+}
+
+/* Fixed 570px width overflowed the viewport on any narrower screen —
+   now it just fills its grid column and scales down naturally. */
+.materialsVisual {
+  width: 100%;
+  height: 400px;
+}
+
+.materialsVisual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.materialNavigationTabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  font-size: 12px;
+  letter-spacing: 1px;
+  margin-bottom: 30px;
+  color: #666;
+}
+.materialNavigationTabs .tabItem.active {
+  color: #fff;
+  border-bottom: 2px solid #fff;
+  padding-bottom: 4px;
+}
+.materialsTextPanel h3 {
+  font-size: 38px;
+  font-weight: 300;
+  margin-bottom: 25px;
+  letter-spacing: 1px;
+}
+.materialsTextPanel p {
+  color: #ccc;
+  line-height: 1.7;
+  font-size: 15px;
+}
+
+.materialsContentLayout {
+  transition: opacity 0.25s ease-in-out;
+}
+
+.materialNavigationTabs .tabItem {
+  cursor: pointer;
+  transition:
+    color 0.3s ease,
+    border-bottom 0.3s ease;
+}
+
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition:
+    opacity 0.9s cubic-bezier(0.25, 1, 0.5, 1),
+    transform 0.9s cubic-bezier(0.25, 1, 0.5, 1);
+  will-change: transform, opacity;
+}
+
+.scroll-reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.delay-1 {
+  transition-delay: 0.1s;
+}
+.delay-2 {
+  transition-delay: 0.2s;
+}
+.delay-3 {
+  transition-delay: 0.3s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-reveal {
+    transition: none;
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/*  Advantages  */
+.advantagesSection {
+  padding: 90px 40px;
+  background-color: #fafafa;
+  border-bottom: 1px solid #eee;
+}
+.advantagesLayout {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.advantagesLeftBlock h2 {
+  font-size: 30px;
+  font-weight: 400;
+  margin-bottom: 20px;
+  line-height: 1.3;
+}
+.advantagesLeftBlock p {
+  color: #555;
+  line-height: 1.6;
+  font-size: 15px;
+}
+.advantagesRightGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+}
+.advantageCard {
+  border: 1px solid #e8e8e8;
+  padding: 35px 20px;
+  text-align: center;
+  background: #fff;
+}
+.advantageCard i {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 15px;
+  display: block;
+}
+.advantageCard h4 {
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: #111;
+  margin: 0;
+}
+
+/* Movement Technical Block  */
+.movementSection {
+  padding: 90px 40px;
+  background-color: #fff;
+}
+.movementLayout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: center;
+}
+.movementInfoBlock h2 {
+  font-size: 38px;
+  font-weight: 400;
+  margin: 15px 0 25px;
+  letter-spacing: 1px;
+}
+.movementInfoBlock p {
+  color: #444;
+  line-height: 1.7;
+  font-size: 15px;
+  margin-bottom: 35px;
+}
+.movementSpecsList {
+  list-style: none;
+  padding: 0;
+}
+.movementSpecsList li {
+  padding: 15px 0;
+  border-bottom: 1px solid #eee;
+  font-size: 13px;
+  font-weight: bold;
+  color: #222;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.movementSpecsList i {
+  color: #666;
+  width: 16px;
+}
+.movementVisualBlock img {
+  width: 100%;
+  height: auto;
+}
+
+.newsletterContainer {
+  width: 100%;
+  min-height: 230px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+
+  padding: 20px;
+}
+
+.newsletterLeft,
+.newsletterRight {
+  flex: 1;
+  max-width: 500px;
+}
+
+.inputBox {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.socialIcons {
+  flex-wrap: wrap;
+}
+
+.title {
+  font-size: 15px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--text-color);
+  margin-bottom: 28px;
+}
+
+.inputBox input {
+  width: 86%;
+  height: 52px;
+
+  border: 1px solid #ddd;
+  outline: none;
+
+  padding: 0 22px;
+  font-size: 16px;
+  background: white;
+}
+
+.inputBox button {
+  width: 14%;
+  height: 52px;
+
+  border: none;
+  background: #d6002a;
+  color: white;
+
+  font-size: 32px;
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.inputBox button:hover {
+  background: #b50023;
+}
+
+/* Divider */
+.divider {
+  width: 1px;
+  height: 120px;
+  background: #ddd;
+}
+
+.socialIcons {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-top: 28px;
+}
+
+.socialIcons i {
+  font-size: 27px;
+  color: var(--text-color);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.socialIcons i:hover {
+  color: #d6002a;
+  transform: translateY(-3px);
+}
+
+/*  Footer */
+
+.footer {
+  width: 100%;
+  background: #f5f5f5;
+  padding: 70px 120px 30px;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 80px;
+}
+
+.footer-column h3 {
+  font-size: 15px;
+  letter-spacing: 1px;
+  color: #222;
+  margin-bottom: 25px;
+  font-weight: 600;
+}
+.footer-column a {
+  display: block;
+  color: var(--text-color);
+  text-decoration: none;
+  margin-bottom: 16px;
+  transition: 0.3s;
+}
+
+.footer-column h3:hover {
+  cursor: default;
+}
+
+.footer-column a:hover {
+  color: #d6002a;
+  transform: translateX(5px);
+}
+
+.contact-btn {
+  margin-top: 25px;
+  width: 220px;
+  height: 60px;
+  border: 1px solid var(--border-color);
+  background: var(--white);
+  font-size: 15px;
+  letter-spacing: 2px;
+  cursor: pointer;
+
+  position: relative;
+  overflow: hidden;
+
+  color: var(--dark);
+  z-index: 1;
+
+  transition: color 0.4s ease;
+}
+
+.contact-btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: var(--hover-color);
+
+  transform: translateY(100px);
+
+  transition: transform 0.4s ease;
+  z-index: -1;
+}
+
+.contact-btn:hover::before {
+  transform: translateY(0);
+}
+
+.contact-btn:hover {
+  color: var(--white);
+}
+
+.footer-bottom {
+  margin-top: 80px;
+  border-top: 1px solid #ddd;
+  padding-top: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.copyright {
+  color: #777;
+  font-size: 14px;
+}
+.footer-links {
+  display: flex;
+  gap: 25px;
+}
+.footer-links a {
+  color: #777;
+  text-decoration: none;
+  font-size: 14px;
+}
+.language {
+  color: #666;
+  font-size: 15px;
+}
+
+.footer-bottom :hover {
+  cursor: default;
+  color: #d6002a;
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+
+/* Tablet: stack the hero into a single column. This is the fix —
+   .detailsHero is flex, so it needs flex-direction, not
+   grid-template-columns (which silently did nothing before). */
+@media (max-width: 960px) {
+  .detailsHero {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .watchInfoContainer {
+    flex: 1 1 auto;
+    width: 100%;
+    position: static; /* sticky only makes sense in the two-column layout */
+    top: auto;
+  }
+
+  .materialsContentLayout,
+  .advantagesLayout,
+  .movementLayout {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .materialsVisual {
+    height: 300px;
+  }
+}
+
+@media screen and (min-width: 900px) and (max-width: 1460px) {
+  .newsCards {
+    height: 450px;
+    width: 270px;
+  }
+
+  .divider {
+    display: block;
+  }
+
+  .socialIcons i {
+    font-size: 20px;
+  }
+}
+
+/* Tablet */
+
+@media (max-width: 1265px) {
+  .footer-bottom {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .newsletterContainer {
+    flex-direction: column;
+    height: auto;
+    padding: 40px 20px;
+    gap: 30px;
+  }
+
+  .newsletterLeft,
+  .newsletterRight {
+    width: 100%;
+  }
+
+  .divider {
+    display: none;
+  }
+
+  .inputBox input {
+    width: 100%;
+  }
+
+  .inputBox {
+    width: 100%;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 966px) {
+  .footer {
+    padding: 50px 30px;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 830px) {
+  /* Navigation */
+
+  .navbarShow {
+    display: flex;
+  }
+
+  .topNav {
+    padding: 12px 16px;
+    border-bottom: 2px solid #444;
+  }
+
+  .menuSection ul li {
+    display: none;
+  }
+
+  .secondNav {
+    position: absolute;
+    top: 85px;
+    right: 100%;
+
+    width: 100%;
+    min-height: 90vh;
+
+    flex-direction: column;
+    justify-content: flex-start;
+
+    background: white;
+    padding: 0;
+  }
+
+  .secondNavList {
+    width: 100%;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .secondNavList li {
+    width: 100%;
+    padding: 32px 14px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    color: #444;
+    border-bottom: 1px solid #cfcfcf;
+  }
+
+  .secondNavList2 {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    padding: 20px 24px;
+
+    list-style: none;
+    background: white;
+  }
+
+  .secondNavList2 li {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 18px 0;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+  .footer-bottom {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .detailsHero {
+    padding: 0 16px;
+    margin: 24px auto;
+  }
+
+  .watchTitle {
+    font-size: 26px;
+  }
+
+  .watchPrice {
+    font-size: 21px;
+  }
+
+  .materialsSection,
+  .advantagesSection,
+  .movementSection {
+    padding: 60px 20px;
+  }
+
+  .materialsTextPanel h3,
+  .movementInfoBlock h2 {
+    font-size: 28px;
+  }
+
+  .advantagesRightGrid {
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+  }
+}
+
+/* Small Mobile */
+
+@media (max-width: 600px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+  }
+  .contact-btn {
+    width: 100%;
+  }
+
+  .newsCards {
+    width: 100%;
+    max-width: 350px;
+  }
+
+  .divider {
+    display: none;
+  }
+
+  .footer {
+    padding: 40px 20px;
+  }
+
+  .socialIcons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 28px;
+  }
+
+  .socialIcons i {
+    font-size: 20px;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .secondaryImagesGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .advantagesRightGrid {
+    grid-template-columns: 1fr;
+  }
+}

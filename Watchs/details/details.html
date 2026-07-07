@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Details</title>
+     <script
+      src="https://kit.fontawesome.com/c54f248231.js"
+      crossorigin="anonymous"
+    ></script>
+
+
+    <link rel="stylesheet" href="./details.css" />
+  </head>
+  <body>
+    <div class="container">
+    <div class="navContainer">
+        <!-- TOP NAV -->
+        <nav class="topNav">
+          <!-- MENU -->
+          <div class="menuSection">
+            <ul>
+              <i
+                onclick="navShow()"
+                class="fa-solid fa-bars-staggered navbarShow"
+              ></i>
+
+              <i onclick="navHide()" class="fa-solid fa-x navbarHide"></i>
+
+              <li>Find a boutique</li>
+
+              <a href="../../Contact-us/contact.html">Contact us</a>
+            </ul>
+          </div>
+
+          <!-- LOGO -->
+          <div class="logoContainer">
+            <img src="../omega-logo.png" alt="Logo" />
+          </div>
+
+          <!-- PROFILE -->
+          <div class="profileSection">
+            <ul>
+              <a href="../Add-to-cart/cart.html">
+                <i class="fa-solid fa-bag-shopping"></i>
+              </a>
+
+              <a href="../../login-page/login.html">
+                <i class="fa-regular fa-user"></i>
+              </a>
+            </ul>
+          </div>
+        </nav>
+
+        <!-- MOBILE NAV -->
+        <nav class="secondNav">
+          <ul class="secondNavList">
+            <li>
+              <a href="../../Watchs/watches.html">WATCHES</a>
+              <span>
+                <i class="fa-solid fa-angle-right"></i>
+              </span>
+            </li>
+
+            <li>
+              <a href="../../Brands/brands.html"> BRANDS</a>
+
+              <span>
+                <i class="fa-solid fa-angle-right"></i>
+              </span>
+            </li>
+
+            <li>
+              <a href="../../Collections/collection.html">COLLECTIONS</a>
+
+              <span>
+                <i class="fa-solid fa-angle-right"></i>
+              </span>
+            </li>
+
+            <li>
+              <a href="../../About-page/about.html"> ABOUT US</a>
+
+              <span>
+                <i class="fa-solid fa-angle-right"></i>
+              </span>
+            </li>
+          </ul>
+
+          <!-- BOTTOM MENU -->
+          <ul class="secondNavList2">
+            <li>
+              <i class="fa-solid fa-location-dot"></i>
+
+              Find a boutique
+            </li>
+
+            <li>
+              <i class="fa-regular fa-envelope"></i>
+
+              <a href="../../Contact-us/contact.html">Contact us</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+ <section class="detailsHero">
+  <div class="watchPreviewContainer">
+    <div class="mainImage">
+        <img id="detail-main-img" src="" alt="Watch Main View" />
+    </div>
+    
+    <div class="secondaryImagesGrid" id="detail-secondary-images">
+        </div>
+  </div>
+
+<div class="watchInfoContainer">
+  <div class="badgeRow">
+       <span class="badgeNew">NEW</span>
+       <span class="badgeSeries">PREMIUM COLLECTION</span>
+    </div>
+    <h1 class="watchTitle" id="detail-title"></h1>
+    <p class="watchSubtitle" id="detail-specs"></p>
+    <div class="watchPrice" id="detail-price"></div>
+
+    <button class="btnBoutique" onclick="addToCart()">ADD TO CART </button>
+
+    <div class="trustBadges">
+        <span><i class="fa-solid fa-check"></i> 5-Year Warranty</span>
+        <span><i class="fa-solid fa-check"></i> Swiss Made</span>
+    </div>
+
+    <div class="detailsAccordion">
+        <div class="accordionItem">
+            <button class="accordionHeader" onclick="toggleAccordion(this)">
+                DESCRIPTION <i class="fa-solid fa-plus"></i>
+            </button>
+            <div class="accordionContent">
+                <p>All our watches are crafted with precision using high-grade materials. This timepiece represents the pinnacle of luxury watchmaking, blending timeless aesthetics with modern mechanical performance. Every watch undergoes rigorous testing for accuracy and durability.</p>
+            </div>
+        </div>
+        
+        <div class="accordionItem">
+            <button class="accordionHeader" onclick="toggleAccordion(this)">
+                FEATURES <i class="fa-solid fa-plus"></i>
+            </button>
+            <div class="accordionContent">
+                <p>Chronometer certified, water-resistant casing, scratch-resistant sapphire crystal, and an anti-magnetic movement for superior precision in all environments.</p>
+            </div>
+        </div>
+        
+        <div class="accordionItem">
+            <button class="accordionHeader" onclick="toggleAccordion(this)">
+                TECHNICAL DATA <i class="fa-solid fa-plus"></i>
+            </button>
+            <div class="accordionContent">
+                <p>Case material: Premium Stainless Steel or Precious Metal. Crystal: Domed scratch-resistant sapphire. Water resistance: Tested to strict industry benchmarks for professional timepieces.</p>
+            </div>
+        </div>
+
+            
+        <div class="accordionItem">
+            <button class="accordionHeader" onclick="toggleAccordion(this)">
+               BRACELET<i class="fa-solid fa-plus"></i>
+            </button>
+            <div class="accordionContent">
+                <p>Case material: Premium Stainless Steel or Precious Metal. Crystal: Domed scratch-resistant sapphire. Water resistance: Tested to strict industry benchmarks for professional timepieces.</p>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+
+
+   <section class="materialsSection scroll-reveal">
+  <h6 class="sectionLabel">KEY MATERIALS</h6>
+  <div class="materialsContentLayout">
+    <div class="materialsVisual">
+      <img src="./stainless-steel.jpg"  alt="Stainless Steel Showcase" />
+    </div>
+    <div class="materialsTextPanel">
+      <div class="materialNavigationTabs">
+        <span class="tabItem active">STAINLESS STEEL</span>
+        <span class="tabItem">CERAMIC</span>
+        <span class="tabItem">SAPPHIRE CRYSTAL</span>
+      </div>
+      <h3>STAINLESS STEEL</h3>
+      <p>
+        Stainless steel is certainly the most conventional of watchmaking materials for outer craftsmanship, and offers beauty, strength and affordability. OMEGA uses 316L stainless steel. Known for its corrosion-resistance and high lustre after polishing, this material is often the ideal choice for watches in both daily-use and high-stress situations such as diving and adventure.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="advantagesSection scroll-reveal">
+  <div class="advantagesLayout">
+    <div class="advantagesLeftBlock">
+      <h2>THE ADVANTAGES OF THIS WATCH</h2>
+      <p>
+        Inside this timepiece are the revolutionary components that guarantee the highest standards of performance. From the Co-Axial escapement for long-lasting precision, to the silicon balance spring for superior anti-magnetism, OMEGA has conquered every challenge that matters.
+      </p>
+    </div>
+    <div class="advantagesRightGrid">
+      <div class="advantageCard scroll-reveal delay-1"><i class="fa-solid fa-crosshairs"></i><h4>SUPERIOR PRECISION</h4></div>
+      <div class="advantageCard scroll-reveal delay-2"><i class="fa-solid fa-magnet"></i><h4>ANTI-MAGNETIC</h4></div>
+      <div class="advantageCard scroll-reveal delay-3"><i class="fa-solid fa-droplet"></i><h4>WATER-RESISTANCE</h4></div>
+      <div class="advantageCard scroll-reveal delay-1"><i class="fa-solid fa-shield-halved"></i><h4>5-YEAR WARRANTY</h4></div>
+      <div class="advantageCard scroll-reveal delay-2"><i class="fa-solid fa-arrows-left-right"></i><h4>LESS SERVICING</h4></div>
+      <div class="advantageCard scroll-reveal delay-3"><i class="fa-solid fa-burst"></i><h4>SHOCK-RESISTANCE</h4></div>
+    </div>
+  </div>
+</section>
+
+      <section class="movementSection scroll-reveal">
+  <div class="movementLayout">
+    <div class="movementInfoBlock">
+      <h6 class="sectionLabel">MOVEMENT</h6>
+      <h2>CALIBRE OMEGA 9900</h2>
+      <p>
+        Self-winding chronograph with column wheel and Co-Axial escapement. Certified Master Chronometer, approved by METAS, resistant to magnetic fields reaching 15,000 gauss. Silicon balance-spring, 2 barrels mounted in series, time zone function. Central hour, minute and chronograph seconds hands, small seconds hand, 12-hour and 60-minute recorders.
+      </p>
+      <ul class="movementSpecsList">
+        <li><i class="fa-solid fa-rotate"></i> SELF WINDING</li>
+        <li><i class="fa-solid fa-battery-three-quarters"></i> 60 HOURS POWER RESERVE</li>
+        <li><i class="fa-solid fa-wave-square"></i> FREQUENCY 4 HZ</li>
+      </ul>
+    </div>
+    <div class="movementVisualBlock">
+      <img src="./calibre.png" alt="Omega Calibre 9900 Mechanical Movement" />
+    </div>
+  </div>
+</section>
+    </div>
+      <div class="newsletterContainer">
+      <!-- Left Side -->
+      <div class="newsletterLeft">
+        <p class="title">SUBSCRIBE TO OUR NEWSLETTER</p>
+
+        <div class="inputBox">
+          <input type="email" placeholder="Email" />
+
+          <button>&#8250;</button>
+        </div>
+      </div>
+
+      <!-- Divider -->
+      <div class="divider"></div>
+
+      <!-- Right Side -->
+      <div class="newsletterRight">
+        <p class="title">FOLLOW US</p>
+
+        <div class="socialIcons">
+          <i class="fa-brands fa-instagram"></i>
+          <i class="fa-brands fa-facebook"></i>
+          <i class="fa-brands fa-x-twitter"></i>
+          <i class="fa-brands fa-youtube"></i>
+          <i class="fa-brands fa-weixin"></i>
+          <i class="fa-brands fa-weibo"></i>
+          <i class="fa-brands fa-pinterest"></i>
+          <i class="fa-brands fa-tiktok"></i>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <!-- Column 1 -->
+        <div class="footer-column">
+          <h3>WATCH COLLECTIONS</h3>
+          <a href="#">Luxury Watches</a> <a href="#">Men's Watches</a>
+          <a href="#">Women's Watches</a> <a href="#">Smart Watches</a>
+          <a href="#">Sports Watches</a> <a href="#">Automatic Watches</a>
+          <a href="#">Chronograph Watches</a> <a href="#">New Arrivals</a>
+        </div>
+        <!-- Column 2 -->
+        <div class="footer-column">
+          <h3>SHOP BY BRAND</h3>
+          <a href="#">Rolex</a> <a href="#">Omega</a> <a href="#">TAG Heuer</a>
+          <a href="#">Seiko</a> <a href="#">Tissot</a> <a href="#">Citizen</a>
+          <a href="#">Casio</a>
+          <a href="#">Fossil</a>
+      
+        </div>
+        <!-- Column 3 -->
+        <div class="footer-column">
+          <h3>CUSTOMER SERVICE</h3>
+          <a href="#">Track Order</a> <a href="#">Shipping Information</a>
+          <a href="#">Returns & Refunds</a> <a href="#">Warranty Policy</a>
+          <a href="#">Payment Methods</a> <a href="#">FAQs</a>
+          <a href="#">Contact Support</a>
+        </div>
+        <!-- Column 4 -->
+        <div class="footer-column">
+          <h3>ABOUT RH MULTI WATCH</h3>
+          <a href="#">Our Story</a> <a href="#">Authenticity Guarantee</a>
+          <a href="#">Blog</a> <a href="#">Careers</a>
+          <a href="#">Press Center</a>
+          <button class="contact-btn">CONTACT US</button>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="copyright">© 2026 RH Multi Watch. All Rights Reserved.</div>
+        <div class="footer-links">
+          <a href="#">Terms of Use</a> <a href="#">Privacy Policy</a>
+          <a href="#">Cookie Policy</a> <a href="#">Accessibility</a>
+        </div>
+        <div class="language">🌐 English</div>
+      </div>
+    </footer>
+    </div>
+  <script src="./detail.js">
+ 
+</script>
+  </body>
+</html>

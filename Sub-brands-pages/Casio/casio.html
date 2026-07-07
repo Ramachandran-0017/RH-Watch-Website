@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Casio | RH Multi Watch</title>
+
+    <link rel="stylesheet" href="../brand.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Top Navigation -->
+    <div class="navContainer">
+      <!-- TOP NAV -->
+      <nav class="topNav">
+        <!-- MENU -->
+        <div class="menuSection">
+          <ul>
+            <i
+              style="display: none"
+              onclick="navShow()"
+              class="fa-solid fa-bars-staggered navbarShow"
+            ></i>
+
+            <i
+              style="display: none"
+              onclick="navHide()"
+              class="fa-solid fa-x navbarHide"
+            ></i>
+
+            <li>Find a boutique</li>
+
+            <li><a href="../../Contact-us/contact.html">Contact us</a></li>
+          </ul>
+        </div>
+
+        <!-- LOGO -->
+        <div class="logoContainer">
+          <img src="../../omega-logo.png" />
+        </div>
+
+        <!-- PROFILE -->
+        <div class="profileSection">
+          <ul>
+            <a href="../../Watchs/Add-to-cart/cart.html">
+              <i class="fa-solid fa-bag-shopping"></i>
+            </a>
+
+            <a href="../../login-page/login.html">
+              <i class="fa-regular fa-user"></i
+            ></a>
+          </ul>
+        </div>
+      </nav>
+
+      <!-- MOBILE NAV -->
+      <nav class="secondNav">
+        <ul class="secondNavList">
+          <li>
+            <a href="../../Watchs/watches.html"> WATCHES </a>
+
+            <span>
+              <i class="fa-solid fa-angle-right"></i>
+            </span>
+          </li>
+
+          <li style="font-weight: 600">
+            <a href="../../Brands/brands.html"> BRANDS </a>
+            <span>
+              <i class="fa-solid fa-angle-right"></i>
+            </span>
+          </li>
+
+          <li>
+            <a href="../../Collections/collection.html"> COLLECTIONS</a>
+
+            <span>
+              <i class="fa-solid fa-angle-right"></i>
+            </span>
+          </li>
+
+          <li>
+            <a href="../../About-page/about.html"> ABOUT US </a>
+
+            <span>
+              <i class="fa-solid fa-angle-right"></i>
+            </span>
+          </li>
+        </ul>
+
+        <!-- BOTTOM MENU -->
+        <ul class="secondNavList2">
+          <li>
+            <i class="fa-solid fa-location-dot"></i>
+
+            Find a boutique
+          </li>
+
+          <li>
+            <i class="fa-regular fa-envelope"></i>
+
+            <a href="../../Contact-us/contact.html">Contact us</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <main class="brand-page">
+      <div class="collectionTrail">
+        <a href="../../index.html">Home</a>
+        <span>/</span>
+        <a href="../../Brands/brands.html">Brands</a>
+        <span>/</span>
+        <p>Casio</p>
+      </div>
+
+      <script>
+        const BRAND_NAME = "Casio";
+      </script>
+
+      <section class="brand-hero">
+        <p class="hero-eyebrow">The House Of</p>
+        <h1 class="hero-title" id="brandHeroTitle">Casio</h1>
+        <p class="hero-sub">
+          Built to outlast — iconic G-Shock toughness to everyday classics.
+        </p>
+      </section>
+
+      <div class="products-grid" id="brandProductsGrid"></div>
+
+      <div class="brand-empty-state" id="brandEmptyState" style="display: none">
+        <i class="fa-regular fa-clock"></i>
+        <p>No watches found for this brand yet.</p>
+        <a href="../../Brands/brands.html">← Back to all brands</a>
+      </div>
+    </main>
+
+    <!-- Newsletter Section -->
+    <div class="newsletterContainer">
+      <div class="newsletterLeft">
+        <p class="title">SUBSCRIBE TO OUR NEWSLETTER</p>
+        <div class="inputBox">
+          <input type="email" placeholder="Email" />
+          <button>&#8250;</button>
+        </div>
+      </div>
+      <div class="divider"></div>
+      <div class="newsletterRight">
+        <p class="title">FOLLOW US</p>
+        <div class="socialIcons">
+          <i class="fa-brands fa-instagram"></i>
+          <i class="fa-brands fa-facebook"></i>
+          <i class="fa-brands fa-x-twitter"></i>
+          <i class="fa-brands fa-youtube"></i>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-column">
+          <h3>WATCH COLLECTIONS</h3>
+          <a href="../Collections/collection.html">Luxury Watches</a>
+          <a href="../Collections/collection.html">Men's Watches</a>
+          <a href="../Collections/collection.html">Women's Watches</a>
+          <a href="../Collections/collection.html">Smart Watches</a>
+        </div>
+        <div class="footer-column">
+          <h3>SHOP BY BRAND</h3>
+          <a href="../Sub-brands-pages/rolex/rolex.html">Rolex</a>
+          <a href="../Sub-brands-pages/omega/omega.html">Omega</a>
+          <a href="../Sub-brands-pages/casio/casio.html">Casio</a>
+          <a href="../Sub-brands-pages/audemarspiguet/audemarspiguet.html"
+            >Audemars Piguet</a
+          >
+          <a href="../Sub-brands-pages/patekphilippe/patekphilippe.html"
+            >Patek Philippe</a
+          >
+          <a href="../Sub-brands-pages/breitling/breitling.html">Breitling</a>
+          <a href="../Sub-brands-pages/tissot/tissot.html">Tissot</a>
+          <a href="../Sub-brands-pages/jaegerlecoultre/jaegerlecoultre.html"
+            >Jaeger-LeCoultre</a
+          >
+          <a href="../Sub-brands-pages/hublot/hublot.html">Hublot</a>
+          <a
+            href="../Sub-brands-pages/vacheronconstantin/vacheronconstantin.html"
+            >Vacheron Constantin</a
+          >
+        </div>
+        <div class="footer-column">
+          <h3>CUSTOMER SERVICE</h3>
+          <a href="#">Track Order</a> <a href="#">Warranty Policy</a>
+          <a href="#">FAQs</a>
+        </div>
+        <div class="footer-column">
+          <h3>ABOUT RH MULTI WATCH</h3>
+          <a href="../About-page/about.html">Our Story</a>
+          <a href="../Contact-us/contact.html"
+            ><button class="contact-btn">CONTACT US</button></a
+          >
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="copyright">© 2026 RH Multi Watch. All Rights Reserved.</div>
+        <div class="language">🌐 English</div>
+      </div>
+    </footer>
+
+    <script src="../../Watchs/watches.js"></script>
+    <script>
+      const BRAND_WATCHES =
+        typeof casioBestsellers !== "undefined" ? casioBestsellers : [];
+    </script>
+
+    <script src="../../nav.js"></script>
+
+    <script src="../brand.js"></script>
+  </body>
+</html>

@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us | RH Multi Watch</title>
+
+    <link rel="stylesheet" href="./about.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Top Navigation -->
+    <div class="navContainer">
+      <!-- TOP NAV -->
+      <nav class="topNav">
+        <!-- MENU -->
+        <div class="menuSection">
+          <ul>
+            <i
+              style="display: none"
+              onclick="navShow()"
+              class="fa-solid fa-bars-staggered navbarShow"
+            ></i>
+
+            <i
+              style="display: none"
+              onclick="navHide()"
+              class="fa-solid fa-x navbarHide"
+            ></i>
+
+            <li>Find a boutique</li>
+
+            <li><a href="../Contact-us/contact.html">Contact us</a></li>
+          </ul>
+        </div>
+
+        <!-- LOGO -->
+
+        <div class="logoContainer">
+          <a href="../index.html">
+            <img src="../omega-logo.png" alt="Logo" />
+          </a>
+        </div>
+
+        <!-- PROFILE -->
+        <div class="profileSection">
+          <ul>
+            <a href="../Watchs/Add-to-cart/cart.html">
+              <i class="fa-solid fa-bag-shopping"></i>
+            </a>
+
+            <a href="../login-page/login.html">
+              <i class="fa-regular fa-user"></i
+            ></a>
+          </ul>
+        </div>
+      </nav>
+
+      <!-- MOBILE NAV -->
+      <nav class="secondNav">
+        <ul class="secondNavList">
+          <li>
+            <a href="../Watchs/watches.html"> WATCHES </a>
+
+            <span>
+              <i class="fa-solid fa-angle-right"></i>
+            </span>
+          </li>
+
+          <li>
+            <a href="../Brands/brands.html"> BRANDS </a>
+            <span>
+              <i class="fa-solid fa-angle-right"></i>
+            </span>
+          </li>
+
+          <li>
+            <a href="../Collections/collection.html"> COLLECTIONS</a>
+
+            <span>
+              <i class="fa-solid fa-angle-right"></i>
+            </span>
+          </li>
+
+          <li style="font-weight: 600">
+            <a style="color: #d6002a" href="#"> ABOUT US </a>
+
+            <span>
+              <i style="color: #d6002a" class="fa-solid fa-angle-right"></i>
+            </span>
+          </li>
+        </ul>
+
+        <!-- BOTTOM MENU -->
+        <ul class="secondNavList2">
+          <li>
+            <i class="fa-solid fa-location-dot"></i>
+
+            Find a boutique
+          </li>
+
+          <li>
+            <i class="fa-regular fa-envelope"></i>
+
+            <a href="../Contact-us/contact.html">Contact us</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <main class="about-page">
+      <!-- HERO -->
+      <section class="about-hero">
+        <p class="hero-eyebrow">Since 1998</p>
+        <h1 class="hero-title">Time, kept<br />the way it deserves to be.</h1>
+        <p class="hero-sub">
+          RH Multi Watch began as a single boutique counter and a simple belief:
+          a great watch should outlive the person who buys it. Almost three
+          decades later, that belief still runs everything we do.
+        </p>
+      </section>
+
+      <!-- STATS -->
+      <section class="stats-bar">
+        <div class="stat-item">
+          <span class="stat-number" data-target="27">0</span>
+          <p class="stat-label">Years in Business</p>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number" data-target="12">0</span>
+          <p class="stat-label">Boutiques Worldwide</p>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number" data-target="40">0</span>
+          <p class="stat-label">Brands Carried</p>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number" data-target="98" data-suffix="%">0</span>
+          <p class="stat-label">Authenticity Guaranteed</p>
+        </div>
+      </section>
+
+      <!-- STORY -->
+      <section class="story-section">
+        <div class="story-media">
+          <div class="story-image-frame">
+            <img
+              src="./store.jpg"
+              alt="RH Multi Watch heritage"
+              class="story-image"
+            />
+          </div>
+        </div>
+        <div class="story-copy">
+          <p class="hero-eyebrow">Our Story</p>
+          <h2 class="section-title">Built by collectors, for collectors.</h2>
+          <p class="story-text">
+            RH Multi Watch was founded on a simple frustration: it was nearly
+            impossible to find a dealer who treated a watch as more than
+            inventory. So we built one — a house where every timepiece is
+            authenticated, every mechanism understood, and every customer
+            treated like the collector they are, whether it's their first watch
+            or their fiftieth.
+          </p>
+          <p class="story-text">
+            Today we carry pieces from more than forty maisons, from entry-level
+            daily-wearers to museum-grade complications, all backed by the same
+            authenticity guarantee we made on day one.
+          </p>
+          <a href="../index.html" class="story-cta">
+            Explore the Collection <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </section>
+
+      <!-- VALUES -->
+      <section class="values-section">
+        <p class="hero-eyebrow center">What We Stand For</p>
+        <h2 class="section-title center">The Principles Behind Every Sale</h2>
+
+        <div class="values-grid">
+          <div class="value-card">
+            <div class="value-icon">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <h3>Authenticity, Verified</h3>
+            <p>
+              Every watch is inspected by certified horologists before it ever
+              reaches a shelf — no exceptions, no shortcuts.
+            </p>
+          </div>
+
+          <div class="value-card">
+            <div class="value-icon"><i class="fa-solid fa-gears"></i></div>
+            <h3>Craftsmanship First</h3>
+            <p>
+              We work directly with in-house watchmakers for servicing and
+              restoration, preserving movements the way they were built.
+            </p>
+          </div>
+
+          <div class="value-card">
+            <div class="value-icon">
+              <i class="fa-solid fa-handshake"></i>
+            </div>
+            <h3>Honest Guidance</h3>
+            <p>
+              No commission-driven upselling. Our specialists help you find the
+              right watch, not just the most expensive one.
+            </p>
+          </div>
+
+          <div class="value-card">
+            <div class="value-icon"><i class="fa-solid fa-heart"></i></div>
+            <h3>Relationships Over Sales</h3>
+            <p>
+              Many of our clients have shopped with us for over a decade. We're
+              building a house you'll return to.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- TIMELINE -->
+      <section class="timeline-section">
+        <p class="hero-eyebrow center">Our Journey</p>
+        <h2 class="section-title center">Three Decades, One Standard</h2>
+
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <span class="timeline-year">1998</span>
+            <p class="timeline-text">
+              Opened our first boutique counter with a handful of pre-owned
+              Rolex and Omega pieces.
+            </p>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <span class="timeline-year">2006</span>
+            <p class="timeline-text">
+              Became an authorized dealer for three additional maisons and
+              opened our first standalone store.
+            </p>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <span class="timeline-year">2014</span>
+            <p class="timeline-text">
+              Launched our in-house authentication and restoration workshop,
+              staffed by certified watchmakers.
+            </p>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <span class="timeline-year">2026</span>
+            <p class="timeline-text">
+              12 boutiques, 40+ brands, and the same authenticity promise we
+              started with.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="about-cta">
+        <h2>Visit a Boutique Near You</h2>
+        <p>
+          Nothing replaces trying a watch on. Find your nearest RH Multi Watch
+          boutique and speak with a specialist.
+        </p>
+        <a href="#" class="cta-btn">
+          Find a Boutique <i class="fa-solid fa-location-dot"></i>
+        </a>
+      </section>
+    </main>
+
+    <!-- Newsletter Section -->
+    <div class="newsletterContainer">
+      <div class="newsletterLeft">
+        <p class="title">SUBSCRIBE TO OUR NEWSLETTER</p>
+        <div class="inputBox">
+          <input type="email" placeholder="Email" />
+          <button>&#8250;</button>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="newsletterRight">
+        <p class="title">FOLLOW US</p>
+        <div class="socialIcons">
+          <i class="fa-brands fa-instagram"></i>
+          <i class="fa-brands fa-facebook"></i>
+          <i class="fa-brands fa-x-twitter"></i>
+          <i class="fa-brands fa-youtube"></i>
+          <i class="fa-brands fa-weixin"></i>
+          <i class="fa-brands fa-weibo"></i>
+          <i class="fa-brands fa-pinterest"></i>
+          <i class="fa-brands fa-tiktok"></i>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-column">
+          <h3>WATCH COLLECTIONS</h3>
+          <a href="../Collections/collection.html">Luxury Watches</a>
+          <a href="../Collections/collection.html">Men's Watches</a>
+          <a href="../Collections/collection.html">Women's Watches</a>
+          <a href="../Collections/collection.html">Smart Watches</a>
+        </div>
+        <div class="footer-column">
+          <h3>SHOP BY BRAND</h3>
+          <a href="../Sub-brands-pages/rolex/rolex.html">Rolex</a>
+          <a href="../Sub-brands-pages/omega/omega.html">Omega</a>
+          <a href="../Sub-brands-pages/casio/casio.html">Casio</a>
+          <a href="../Sub-brands-pages/audemarspiguet/audemarspiguet.html"
+            >Audemars Piguet</a
+          >
+          <a href="../Sub-brands-pages/patekphilippe/patekphilippe.html"
+            >Patek Philippe</a
+          >
+          <a href="../Sub-brands-pages/breitling/breitling.html">Breitling</a>
+          <a href="../Sub-brands-pages/tissot/tissot.html">Tissot</a>
+          <a href="../Sub-brands-pages/jaegerlecoultre/jaegerlecoultre.html"
+            >Jaeger-LeCoultre</a
+          >
+          <a href="../Sub-brands-pages/hublot/hublot.html">Hublot</a>
+          <a
+            href="../Sub-brands-pages/vacheronconstantin/vacheronconstantin.html"
+            >Vacheron Constantin</a
+          >
+        </div>
+        <div class="footer-column">
+          <h3>CUSTOMER SERVICE</h3>
+          <a href="#">Track Order</a> <a href="#">Warranty Policy</a>
+          <a href="#">FAQs</a>
+        </div>
+        <div class="footer-column">
+          <h3>ABOUT RH MULTI WATCH</h3>
+          <a href="../About-page/about.html">Our Story</a>
+          <a href="../Contact-us/contact.html"
+            ><button class="contact-btn">CONTACT US</button></a
+          >
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="copyright">© 2026 RH Multi Watch. All Rights Reserved.</div>
+        <div class="language">🌐 English</div>
+      </div>
+    </footer>
+    <script src="../nav.js"></script>
+    <script src="./about.js"></script>
+  </body>
+</html>

@@ -55,10 +55,33 @@ a {
 }
 
 .navContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
-  background: #f5f5f5;
+  z-index: 1000;
+  transition:
+    transform 0.35s ease,
+    background 0.3s ease,
+    box-shadow 0.3s ease;
+  width: 100%;
+  background: var(--primary-bg);
   border-bottom: 1px solid #e5e5e5;
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.12);
+}
+
+.navContainer.nav-hidden {
+  transform: translateY(-100%);
+}
+
+.navContainer.nav-solid {
+  background: var(--white);
+  color: var(--dark);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.navContainer.nav-solid .topNav {
+  color: var(--dark);
 }
 
 .navbarHide,

@@ -189,7 +189,7 @@ a {
 
 .watchFinder {
   width: min(var(--container), 95%);
-  margin: auto;
+  margin: 110px auto;
   padding: 50px 0 80px;
 }
 

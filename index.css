@@ -451,7 +451,7 @@ a {
   justify-content: center;
   align-items: center;
   gap: 20px;
-  animation: collectionScroll 23s linear forwards infinite;
+  animation: collectionScroll 13s linear forwards infinite;
 }
 
 /* Collection Cards */
@@ -473,7 +473,6 @@ a {
     box-shadow 0.35s ease;
 }
 
-/* Skeleton shimmer plays until the real image has decoded */
 @keyframes cardShimmer {
   0% {
     background-position: 200% 0;
@@ -515,7 +514,6 @@ a {
   transform: scale(1.08);
 }
 
-/* Label overlay populated by index.js */
 .collection-card-label {
   position: absolute;
   left: 0;

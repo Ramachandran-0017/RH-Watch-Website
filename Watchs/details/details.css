@@ -171,7 +171,7 @@ a {
 .detailsHero {
   display: flex;
   align-items: flex-start;
-  margin: 40px auto;
+  margin: 120px auto;
   gap: 60px;
   padding: 0 20px;
   position: relative;
@@ -179,17 +179,13 @@ a {
 }
 
 .watchPreviewContainer {
-  flex: 1 1 0%; /* takes up remaining space, can shrink */
-  min-width: 0; /* lets flex children shrink below their content size */
+  flex: 1 1 0%;
+  min-width: 0;
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
-/* --- The sticky right column ---
-   Single source of truth for sizing: flex-basis controls the
-   width in the flex layout, so there's no fight with a separate
-   `width` declaration. */
 .watchInfoContainer {
   flex: 0 0 420px;
   max-width: 100%;
@@ -327,7 +323,6 @@ a {
   border-bottom: 1px solid #eee;
 }
 
-/* Accordion Component UI */
 .accordionItem {
   border-bottom: 1px solid #eee;
 }
@@ -382,8 +377,6 @@ a {
   align-items: center;
 }
 
-/* Fixed 570px width overflowed the viewport on any narrower screen —
-   now it just fills its grid column and scales down naturally. */
 .materialsVisual {
   width: 100%;
   height: 400px;
@@ -761,13 +754,6 @@ a {
   color: #d6002a;
 }
 
-/* ============================================================
-   RESPONSIVE
-   ============================================================ */
-
-/* Tablet: stack the hero into a single column. This is the fix —
-   .detailsHero is flex, so it needs flex-direction, not
-   grid-template-columns (which silently did nothing before). */
 @media (max-width: 960px) {
   .detailsHero {
     flex-direction: column;
@@ -777,7 +763,7 @@ a {
   .watchInfoContainer {
     flex: 1 1 auto;
     width: 100%;
-    position: static; /* sticky only makes sense in the two-column layout */
+    position: static;
     top: auto;
   }
 
@@ -951,7 +937,7 @@ a {
 
   .detailsHero {
     padding: 0 16px;
-    margin: 24px auto;
+    margin: 110px auto;
   }
 
   .watchTitle {

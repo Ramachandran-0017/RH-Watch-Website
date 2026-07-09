@@ -572,9 +572,11 @@ h3 {
     padding: 12px 16px;
     border-bottom: 2px solid #444;
   }
+
   .menuSection ul li {
     display: none;
   }
+
   .secondNav {
     position: absolute;
     top: 85px;

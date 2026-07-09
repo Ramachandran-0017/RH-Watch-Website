@@ -262,12 +262,12 @@ a {
 #brands-container {
   padding: 0 40px;
   max-width: 1300px;
-  margin: 0 auto;
+  margin: 0px auto;
   padding-top: 35px;
 }
 
 .brand-section {
-  margin-bottom: 90px;
+  margin: 120px 0 90px 0;
   scroll-margin-top: 110px;
 }
 

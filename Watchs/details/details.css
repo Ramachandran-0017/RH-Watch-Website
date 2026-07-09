@@ -164,14 +164,10 @@ a {
   cursor: pointer;
 }
 
-/* ============================================================
-   DETAILS HERO — flex layout: image column + sticky info column
-   ============================================================ */
-
 .detailsHero {
   display: flex;
   align-items: flex-start;
-  margin: 120px auto;
+  margin: 160px auto;
   gap: 60px;
   padding: 0 20px;
   position: relative;

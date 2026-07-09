@@ -618,6 +618,19 @@ h3 {
   }
 }
 
+@media screen and (min-width: 420px) and (max-width: 600px) {
+  .brands-grid {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  .brand-tile {
+    width: 90%;
+    max-width: 380px;
+    height: 500px;
+  }
+}
+
 @media (max-width: 600px) {
   .brands-grid {
     grid-template-columns: 1fr;

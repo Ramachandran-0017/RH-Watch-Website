@@ -60,7 +60,9 @@ document.addEventListener("DOMContentLoaded", () => {
     tile.href = `../Sub-brands-pages/${brand.name}/${brand.slug}.html`;
 
     tile.innerHTML = `
-      <div class="brand-tile-photo" style="  background-image: url(${brand.photo});">
+      <div class="brand-tile-photo">
+        <img src="${brand.photo}" alt="${brand.name}">
+    </div>
        
       </div>
       <div class="brand-tile-label">

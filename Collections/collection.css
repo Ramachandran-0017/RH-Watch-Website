@@ -55,10 +55,32 @@ a {
 /* ---------- Navigation Wrapper ---------- */
 
 .navContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
-  background: #f5f5f5;
-  border-bottom: 1px solid #e5e5e5;
-  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.12);
+  z-index: 1000;
+  background: transparent;
+  transition:
+    transform 0.35s ease,
+    background 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.navContainer.nav-hidden {
+  transform: translateY(-100%);
+}
+
+.navContainer.nav-solid {
+  background: var(--white);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.navContainer.nav-solid,
+.navContainer.nav-solid a,
+.navContainer.nav-solid li,
+.navContainer.nav-solid i {
+  color: var(--dark);
 }
 
 .navbarHide,
@@ -241,6 +263,7 @@ a {
   padding: 0 40px;
   max-width: 1300px;
   margin: 0 auto;
+  padding-top: 35px;
 }
 
 .brand-section {

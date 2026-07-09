@@ -59,12 +59,6 @@ a {
   text-decoration: none;
 }
 
-/* ============================================================
-   SCROLL-REVEAL SYSTEM
-   Generic utility classes toggled by IntersectionObserver in
-   index.js. Respect reduced-motion for accessibility.
-   ============================================================ */
-
 .reveal,
 .reveal-left,
 .reveal-right,
@@ -99,7 +93,6 @@ a {
   transform: none;
 }
 
-/* Staggered delay for grouped items (brand cards, news cards) */
 .reveal-item:nth-child(1) {
   transition-delay: 0s;
 }
@@ -131,8 +124,6 @@ a {
   transition-delay: 0.72s;
 }
 
-/* Hero text — staggered load-in on page load, not scroll-triggered
-   (it's already above the fold when the page opens) */
 .hero-in {
   opacity: 0;
   transform: translateY(24px);
@@ -196,14 +187,31 @@ a {
   z-index: -1;
 }
 
-/* 
-   NAVIGATION
- */
-
-/* ---------- Navigation Wrapper ---------- */
-
 .navContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
+  z-index: 1000;
+  background: transparent;
+  transition:
+    transform 0.35s ease,
+    background 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.navContainer.nav-hidden {
+  transform: translateY(-100%);
+}
+
+.navContainer.nav-solid {
+  background: var(--white);
+  color: var(--dark);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.navContainer.nav-solid .topNav {
+  color: var(--dark);
 }
 
 .navbarHide,
@@ -223,6 +231,7 @@ a {
   align-items: center;
   padding: 10px 24px;
   color: var(--white);
+  transition: color 0.3s ease;
 }
 
 /* Menu */
@@ -287,12 +296,19 @@ a {
   cursor: pointer;
 }
 
+.navContainer.nav-solid,
+.navContainer.nav-solid a,
+.navContainer.nav-solid li,
+.navContainer.nav-solid i {
+  color: var(--dark);
+}
+
 /*
     HERO CONTENT
 */
 
 .textBox {
-  height: 75vh;
+  height: 100vh;
   display: flex;
   align-items: flex-end;
   padding: 30px;

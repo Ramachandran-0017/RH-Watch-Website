@@ -25,3 +25,29 @@ window.addEventListener("resize", () => {
     navbarHide.style.display = "none";
   }
 });
+
+const siteNav = document.querySelector(".navContainer");
+
+if (siteNav) {
+  let lastScrollY = window.scrollY;
+  const NAV_SCROLL_THRESHOLD = 80;
+
+  window.addEventListener("scroll", () => {
+    const currentScrollY = window.scrollY;
+
+    if (currentScrollY > NAV_SCROLL_THRESHOLD) {
+      siteNav.classList.add("nav-solid");
+
+      if (currentScrollY > lastScrollY) {
+        siteNav.classList.add("nav-hidden");
+      } else {
+        siteNav.classList.remove("nav-hidden");
+      }
+    } else {
+      siteNav.classList.remove("nav-solid");
+      siteNav.classList.remove("nav-hidden");
+    }
+
+    lastScrollY = currentScrollY;
+  });
+}

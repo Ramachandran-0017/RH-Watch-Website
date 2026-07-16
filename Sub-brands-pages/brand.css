@@ -42,8 +42,6 @@ h3 {
   font-weight: 300;
 }
 
-/* ---------- NAV (same as rest of site) ---------- */
-
 .navContainer {
   position: fixed;
   top: 0;
@@ -156,8 +154,6 @@ i {
   color: var(--hover-color);
 }
 
-/* ---------- BREADCRUMB ---------- */
-
 .collectionTrail {
   display: flex;
   align-items: center;
@@ -218,10 +214,6 @@ i {
   line-height: 2;
   letter-spacing: 0.5px;
 }
-
-/* ============================================================
-   CARDS — identical design language to the Collections page
-   ============================================================ */
 
 .products-grid {
   display: grid;
@@ -392,8 +384,6 @@ i {
   transform: translateY(0);
 }
 
-/* ---------- EMPTY STATE ---------- */
-
 .brand-empty-state {
   display: none;
   flex-direction: column;
@@ -423,8 +413,6 @@ i {
   border-bottom: 1px solid var(--hover-color);
   padding-bottom: 2px;
 }
-
-/* ---------- NEWSLETTER + FOOTER (same as rest of site) ---------- */
 
 .newsletterContainer {
   width: 100%;

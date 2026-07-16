@@ -52,7 +52,6 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-// remove one item from the cart, then reload the page
 function removeFromCart(index) {
   let cart = JSON.parse(localStorage.getItem("watchCart")) || [];
 
@@ -63,7 +62,6 @@ function removeFromCart(index) {
   location.reload();
 }
 
-// show a popup that says the order was placed
 function showOrderPlaced() {
   const overlay = document.getElementById("orderSuccessOverlay");
   const orderIdText = document.getElementById("orderIdText");

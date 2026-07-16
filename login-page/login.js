@@ -1,7 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-  /* ---------------------------------------------------------
-     1. LIVE ANALOG CLOCK (signature element)
-  --------------------------------------------------------- */
   const ticksGroup = document.getElementById("clockTicks");
   const center = 120;
   const radius = 110;
@@ -48,9 +45,6 @@ document.addEventListener("DOMContentLoaded", () => {
   tickClock();
   setInterval(tickClock, 1000);
 
-  /* ---------------------------------------------------------
-     2. TAB SWITCHING (Sign In / Create Account)
-  --------------------------------------------------------- */
   const tabs = document.querySelectorAll(".auth-tab");
   const tabsWrap = document.querySelector(".auth-tabs");
   const forms = document.querySelectorAll(".auth-form");
@@ -70,9 +64,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  /* ---------------------------------------------------------
-     3. SHOW / HIDE PASSWORD
-  --------------------------------------------------------- */
   document.querySelectorAll(".toggle-password").forEach((btn) => {
     btn.addEventListener("click", () => {
       const input = document.getElementById(btn.dataset.target);
@@ -85,9 +76,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  /* ---------------------------------------------------------
-     4. PASSWORD STRENGTH METER (sign up only)
-  --------------------------------------------------------- */
   const signupPassword = document.getElementById("signupPassword");
   const strengthMeter = document.getElementById("passwordStrength");
 
@@ -106,9 +94,6 @@ document.addEventListener("DOMContentLoaded", () => {
     else strengthMeter.classList.add("strong");
   });
 
-  /* ---------------------------------------------------------
-     5. VALIDATION HELPERS
-  --------------------------------------------------------- */
   const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
   function setError(inputId, errorId, message) {
@@ -118,9 +103,6 @@ document.addEventListener("DOMContentLoaded", () => {
     errorEl.textContent = message || "";
   }
 
-  /* ---------------------------------------------------------
-     6. SIGN IN SUBMIT
-  --------------------------------------------------------- */
   const signinForm = document.getElementById("signinForm");
   const signinNote = document.getElementById("signinNote");
 
@@ -154,7 +136,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (!valid) return;
 
-    // Frontend-only simulation: check against any account saved during sign up
     const users = JSON.parse(localStorage.getItem("watchUsers")) || [];
     const match = users.find(
       (u) =>
@@ -177,9 +158,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  /* ---------------------------------------------------------
-     7. SIGN UP SUBMIT
-  --------------------------------------------------------- */
   const signupForm = document.getElementById("signupForm");
   const signupNote = document.getElementById("signupNote");
 

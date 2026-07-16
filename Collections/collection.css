@@ -52,8 +52,6 @@ a {
   text-decoration: none;
 }
 
-/* ---------- Navigation Wrapper ---------- */
-
 .navContainer {
   position: fixed;
   top: 0;
@@ -164,10 +162,6 @@ a {
   cursor: pointer;
 }
 
-/* ============================================================
-   HERO
-   ============================================================ */
-
 .collection-showcase {
   min-height: 600px;
   padding-bottom: 60px;
@@ -228,10 +222,6 @@ a {
   color: var(--dark);
   margin: 0;
 }
-
-/* ============================================================
-   BRAND QUICK-NAV — populated by collection.js
-   ============================================================ */
 
 .brand-quicknav {
   display: flex;
@@ -531,10 +521,6 @@ a {
   color: var(--white);
 }
 
-/* ============================================================
-   NEWSLETTER
-   ============================================================ */
-
 .newsletterContainer {
   background-color: var(--dark);
   color: #ffffff;
@@ -621,10 +607,6 @@ a {
   transform: translateY(-2px);
 }
 
-/* ============================================================
-   FOOTER
-   ============================================================ */
-
 .footer {
   background-color: #ffffff;
   border-top: 1px solid var(--border-color);
@@ -695,10 +677,6 @@ a {
   color: var(--text-color);
   letter-spacing: 0.5px;
 }
-
-/* ============================================================
-   RESPONSIVE
-   ============================================================ */
 
 .newsletterContainer {
   width: 100%;

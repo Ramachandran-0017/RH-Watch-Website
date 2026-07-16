@@ -48,17 +48,11 @@ a {
   outline-offset: 2px;
 }
 
-/* ============================================================
-   PAGE LAYOUT — split screen
-   ============================================================ */
-
 .auth-page {
   min-height: 100vh;
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
-
-/* ---------- LEFT: brand panel ---------- */
 
 .auth-brand-panel {
   background: var(--dark);
@@ -157,8 +151,6 @@ a {
   line-height: 2;
   letter-spacing: 1px;
 }
-
-/* ---------- RIGHT: form panel ---------- */
 
 .auth-form-panel {
   display: flex;
@@ -375,8 +367,6 @@ a {
   text-decoration: underline;
 }
 
-/* Submit button — same fill-from-bottom pill as the cart's checkout button */
-
 .auth-submit {
   width: 100%;
   padding: 16px;
@@ -527,10 +517,6 @@ a {
 .auth-back:hover .back-arrow {
   transform: translateX(-4px);
 }
-
-/* ============================================================
-   RESPONSIVE
-   ============================================================ */
 
 @media (max-width: 980px) {
   .auth-page {
